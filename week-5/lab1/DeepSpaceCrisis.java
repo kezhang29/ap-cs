@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class DeepSpaceCrisis {
 
     public static boolean isCorrect(String answer, String correctAnswer) {
-        return answer.toLowerCase().equals(correctAnswer);
+        return answer.equalsIgnoreCase(correctAnswer);
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("CHoose a mission stream, orbital or trivia: ");
+        System.out.print("Choose a mission stream, orbital or trivia: ");
         String selection = sc.next();
         int correctResponses = 0;
         if (selection.toLowerCase().equals("orbital")) {
