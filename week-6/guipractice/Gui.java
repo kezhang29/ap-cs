@@ -5,11 +5,11 @@ import java.awt.Dimension;
 
 
 // Class that sets up the JPanel and draws on the panel
-public class GuiEx extends JPanel {
+public class Gui extends JPanel {
 	private int x, y;
         
         // Constructor that initializes instance variables, etc.
-	public GuiEx() {
+	public Gui() {
 		setFocusable(true);  // set to true by default, so really don't need this.
 		setLayout(null);  /* Allows us to control the positioning of components on 
 		                     the panel. If not set to null, BorderLayout is the default layout. */

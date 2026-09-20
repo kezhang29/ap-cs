@@ -8,7 +8,7 @@ public class Runner {
 
 
         //Create JPanel object and add it to the frame
-        GuiEx canvas = new GuiEx();
+        Gui canvas = new Gui();
         frame.add(canvas);
 
 
