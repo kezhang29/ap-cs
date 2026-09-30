@@ -10,22 +10,16 @@ public class Runner {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Please input a time of day, either day or night: ");
-        String timeOfDay;
-        while (true) {
-           timeOfDay = sc.next();
-           if (timeOfDay.equalsIgnoreCase("day") || timeOfDay.equalsIgnoreCase("night")) {
-                break;
-           }
+        String timeOfDay = sc.next();
+        while (!(timeOfDay.equalsIgnoreCase("day") || timeOfDay.equalsIgnoreCase("night"))) {
            System.out.print("Please enter a valid response:");
+           timeOfDay = sc.next();
         }
         System.out.print("Input a season, spring, fall, or winter: ");
-        String season;
-        while (true) {
-           season = sc.next();
-           if (season.equalsIgnoreCase("spring") || season.equalsIgnoreCase("fall") || season.equalsIgnoreCase("winter")) {
-                break;
-           }
+        String season = sc.next();
+        while (!(season.equalsIgnoreCase("spring") || season.equalsIgnoreCase("fall") || season.equalsIgnoreCase("winter"))) {
            System.out.print("Please enter a valid response:");
+           season = sc.next();
         }
         // Create the JPanel object and add it to the frame
         Scenery canvas = new Scenery(timeOfDay, season);
