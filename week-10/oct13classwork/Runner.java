@@ -28,7 +28,7 @@ public class Runner {
         num = 1;
         do {
             System.out.print(num + " ");
-            num += 1;1
+            num += 1;
         } while (num <= end);
         System.out.println();
         num = end;

@@ -1,4 +1,3 @@
-package oct12classwork;
 import java.util.Scanner;
 
 public class Runner {
