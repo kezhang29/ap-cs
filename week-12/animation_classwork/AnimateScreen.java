@@ -9,13 +9,13 @@ public class AnimateScreen extends JPanel {
 
 
     // Instance variables
-    Scenery scenery;
+    MoveObjects moveObjects;
     // Constructor
     public AnimateScreen() {
        setFocusable(true);
        setLayout(null);
 
-       scenery = new Scenery(20,50,30,40,200,50);
+       moveObjects = new MoveObjects(20,50,100,40,200,50);
     }
 
 
@@ -32,7 +32,7 @@ public class AnimateScreen extends JPanel {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 
-        scenery.drawScene(g);
+        moveObjects.drawScene(g);
        
 	}
     
@@ -49,7 +49,7 @@ public class AnimateScreen extends JPanel {
             }
             
             // Add the code that "moves" your objects here. 
-            scenery.animate();    
+            moveObjects.animate();    
             /* Repaint the graphics drawn. You MUST have this in your code
               because each time an object is moved, the panel needs to 
               be updated. */
