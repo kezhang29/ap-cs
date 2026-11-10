@@ -46,10 +46,14 @@ public class Screen extends JPanel implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         // Triggers spin when spacebar is pressed
-        if (e.getKeyCode() == 32) {   // or whatever key you want to use for your spin key
-            
+        if (e.getKeyCode() == 32) { // or whatever key you want to use for your spin key
+            if (slotMachine.keepPlaying()) {
+                slotMachine.play();
             }
         }
+
+        repaint();
+    }
     
 
 
