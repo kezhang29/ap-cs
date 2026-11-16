@@ -8,15 +8,18 @@ import javax.imageio.ImageIO;
 import java.awt.Font;
 
 public class SlotMachine {
+    // Random numbers generated
     private int num1, num2, num3;
+    // Totals winnings
     private int winnings;
     private int balance;
+    private Coin[] coins;
 
     private BufferedImage slotMachineBufferedImage;
-    private BufferedImage coinBufferedImage;
 
     public SlotMachine(int balance) {
         this.balance = balance;
+        // Gets the slot machine image
         try {
             slotMachineBufferedImage = ImageIO.read(new File("./slot_machine.png"));
         } catch (IOException e) {
@@ -25,6 +28,7 @@ public class SlotMachine {
 
     }
 
+    // Draws the slot machine
     public void drawMachine(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         int width = slotMachineBufferedImage.getWidth();   // returns the width of the image
@@ -44,6 +48,7 @@ public class SlotMachine {
         drawPayout(g);
     }
 
+    // Draws what numbers on slot machine correspond to what winning amounts
     private void drawPayout(Graphics g) {
         g.setFont(new Font(Font.SERIF,Font.BOLD,25));
         g.drawString("7 7 7 = 100 points", 30, 45);
@@ -51,14 +56,18 @@ public class SlotMachine {
         g.drawString("2 of a kind = 2 points", 30,105);
     }
 
+    // Ran when user pressed space bar, simulates the slot machine turning
     public void play() {
+        // Payment fee into the slot machine
         balance -= 1;
         winnings = 0;
 
+        // Generate 3 random numbers
         num1 = (int)(Math.random() * 9) + 1;
         num2 = (int)(Math.random() * 9) + 1;
         num3 = (int)(Math.random() * 9) + 1;
 
+        // Conditions for winnings
         if ((num1 == 7) && (num2 == 7) && (num3 == 7)) {
             winnings = 100;
         } else if ((num1 == num2) && (num1 == num3) && (num2 == num3)) {
@@ -69,8 +78,13 @@ public class SlotMachine {
         balance += winnings;
     }
 
+    // Getter
+    public int getWinnings() {
+        return winnings;
+    }
+
+    // Allow the user to keep playing if they still have money
     public boolean keepPlaying() {
         return balance > 0;
     }
-    
 }
