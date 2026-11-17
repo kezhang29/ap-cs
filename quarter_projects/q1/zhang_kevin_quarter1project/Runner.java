@@ -1,3 +1,4 @@
+package quarter_projects.q1.zhang_kevin_quarter1project;
 import javax.swing.JFrame;
 import java.util.Scanner;
 

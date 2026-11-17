@@ -1,3 +1,4 @@
+package quarter_projects.q1.zhang_kevin_quarter1project;
 // The following 4 imports allow you to draw on a JPanel
 import javax.swing.JPanel;
 import java.awt.Color;
