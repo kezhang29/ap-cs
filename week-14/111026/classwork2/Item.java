@@ -1,4 +1,5 @@
 public class Item {
+    // Item atributes
     private String name;
     private double price;    
 
@@ -7,6 +8,7 @@ public class Item {
         this.price = price;
     }
 
+    // Getters
     public double getPrice() {
         return price;
     }

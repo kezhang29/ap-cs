@@ -1,4 +1,5 @@
 public class Candy {
+    // Candy attributes
     private String type;
     private double size;
     
@@ -7,6 +8,7 @@ public class Candy {
         this.size = size;
     }
 
+    // Getters
     public String getType() {
         return type;
     }

@@ -4,6 +4,7 @@ public class Runner {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Item[] itemArray = new Item[8];
+        // Initialize elements
         itemArray[0] = new Item("Book", 10.90);
         itemArray[1] = new Item("Door", 30.0);
         itemArray[2] = new Item("brain", 15.23);
@@ -24,6 +25,7 @@ public class Runner {
         do {
             System.out.print("Choice: ");
             choice = sc.nextInt();
+            // Case on choices
             if (choice == 1) {
                 for (Item i : itemArray) {
                     System.out.println(i.getName() + "\t " + i.getPrice());
